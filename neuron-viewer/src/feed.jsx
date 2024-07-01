@@ -47,12 +47,12 @@ export default function Feed() {
               <Pane>
                 {React.createElement(Panes["DatasetList"], { activeNeuron })}
               </Pane>
-              <Pane>
+              {/* <Pane>
                 {React.createElement(Panes["TopTokens"], { activeNeuron })}
-              </Pane>
-              <Pane>
+              </Pane> */}
+              {/* <Pane>
                 {React.createElement(Panes["SimilarNeurons"], { activeNeuron })}
-              </Pane>
+              </Pane> */}
             </> :
             <Welcome/>
           }

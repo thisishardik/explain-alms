@@ -83,9 +83,9 @@ const ExplanationDisplay = ({ activeNeuron }) => {
               <p className="py-1">
                 <em>score: {data.scored_simulation.ev_correlation_score.toFixed(2)}</em>
               </p>
-              <p className="py-1">
+              {/* <p className="py-1">
                 <a href={suggest_explanation_link}>Suggest Better Explanation</a>
-              </p>
+              </p> */}
             </blockquote>
             <button onClick={() => { setShowingScoringDetails(!showingScoringDetails) }}>
               {showingScoringDetails ? 'Hide' : 'Show'} scoring details
@@ -112,7 +112,7 @@ const ExplanationDisplay = ({ activeNeuron }) => {
                         transition: 'background-color 0.2s',
                       }}
                     >
-                      <input
+                      {/* <input
                         type="checkbox"
                         id="toggle"
                         checked={toggle}
@@ -124,8 +124,8 @@ const ExplanationDisplay = ({ activeNeuron }) => {
                           opacity: '0',
                           cursor: 'pointer',
                         }}
-                      />
-                      <span
+                      /> */}
+                      {/* <span
                         onClick={handleToggleChange}
                         style={{
                           position: 'absolute',
@@ -138,10 +138,10 @@ const ExplanationDisplay = ({ activeNeuron }) => {
                           boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
                           transition: 'left 0.2s',
                         }}
-                      ></span>
+                      ></span> */}
                     </div>
                     <br />
-                    {toggle ? 'Activations overlaid (top = real, bottom = simulated)' : 'Activations not overlaid'}
+                    {/* {toggle ? 'Activations overlaid (top = real, bottom = simulated)' : 'Activations not overlaid'} */}
                   </div>
                   <h3 className="text-md font-bold">Top</h3>
                   <SimulationHeatmap
@@ -149,12 +149,12 @@ const ExplanationDisplay = ({ activeNeuron }) => {
                     simulated_sequences={sim_sequences.slice(0, 5)}
                     overlay_activations={toggle}
                   />
-                  <h3 className="text-md font-bold">Random</h3>
+                  {/* <h3 className="text-md font-bold">Random</h3>
                   <SimulationHeatmap
                     sequences={real_sequences.slice(5)}
                     simulated_sequences={sim_sequences.slice(5)}
                     overlay_activations={toggle}
-                  />
+                  /> */}
                 </> : null
             }
           </>
